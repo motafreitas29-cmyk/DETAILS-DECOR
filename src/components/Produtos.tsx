@@ -1,53 +1,54 @@
 import { WA_LINK } from '../App';
-import { CheckCircle2 } from 'lucide-react';
 
 const produtos = [
-  { emoji: '🪟', name: 'Cortinas de Tecido', desc: 'Tecidos nacionais e importados em dezenas de cores e texturas.' },
-  { emoji: '⚡', name: 'Persianas Motorizadas', desc: 'Controle com um toque — praticidade e tecnologia no seu ambiente.' },
-  { emoji: '🌙', name: 'Blackouts Premium', desc: 'Bloqueio total de luz para dormitórios e salas de cinema.' },
-  { emoji: '☀️', name: 'Telas Solares', desc: 'Proteção UV mantendo a vista e a ventilação natural do ambiente.' },
+  { emoji: '🪟', name: 'Cortinas de Tecido', desc: 'Tecidos nacionais e importados — dezenas de cores, texturas e acabamentos sob medida.' },
+  { emoji: '⚡', name: 'Persianas Motorizadas', desc: 'Controle com um toque. Praticidade e sofisticação para o seu espaço.' },
+  { emoji: '🌙', name: 'Blackout Premium', desc: 'Bloqueio total de luz para dormitórios, home theater e salas de reunião.' },
+  { emoji: '☀️', name: 'Telas Solares', desc: 'Proteção UV sem perder a vista. Ideal para sacadas, salas e escritórios.' },
 ];
 
 export default function Produtos() {
   return (
-    <section id="produtos" className="py-20 px-4 bg-[#FAFAF7]">
+    <section id="produtos" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-[#C8A96A] text-xs font-bold tracking-[0.3em] uppercase mb-3">Nossos Produtos</p>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#1a1a1a] mb-5 leading-tight">
-              Soluções customizadas para sua residência ou empresa
-            </h2>
-            <p className="text-[#666] text-base leading-relaxed mb-8">
-              Projetos personalizados com consultoria completa sobre luminosidade, privacidade e estética — do projeto à instalação.
-            </p>
-            <div className="flex flex-col gap-3 mb-8">
-              {['Qualidade Premium', 'Tecidos nacionais e importados', 'Medição e instalação incluídas', 'Garantia no serviço'].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#C8A96A] flex-shrink-0" />
-                  <span className="text-[#444] text-sm font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
+        <div className="text-center mb-12">
+          <p className="text-[#C8A96A] text-xs font-bold tracking-[0.3em] uppercase mb-3">Soluções Completas</p>
+          <h2 className="text-3xl sm:text-4xl font-black text-[#1a1a1a]">Para cada ambiente, o produto certo</h2>
+          <p className="text-[#777] mt-3 max-w-xl mx-auto text-base">
+            Consultoria personalizada para encontrar a solução ideal para luminosidade, privacidade e estética.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {produtos.map((p, i) => (
             <a
+              key={i}
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[#C8A96A] text-white font-bold py-4 px-8 rounded-full hover:bg-[#b8954f] transition-all"
+              className="group bg-[#FAFAF7] border border-[#C8A96A]/20 rounded-3xl p-6 hover:border-[#C8A96A] hover:shadow-lg transition-all cursor-pointer"
             >
-              CONHECER PRODUTOS
+              <p className="text-4xl mb-4">{p.emoji}</p>
+              <h3 className="font-black text-[#1a1a1a] text-base mb-2">{p.name}</h3>
+              <p className="text-[#888] text-sm leading-relaxed mb-4">{p.desc}</p>
+              <p className="text-[#C8A96A] text-xs font-bold group-hover:underline">Pedir orçamento →</p>
             </a>
-          </div>
+          ))}
+        </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            {produtos.map((p, i) => (
-              <div key={i} className="bg-white border border-[#C8A96A]/20 rounded-2xl p-5 hover:shadow-lg transition-shadow">
-                <p className="text-3xl mb-3">{p.emoji}</p>
-                <h3 className="font-bold text-[#1a1a1a] text-sm mb-2">{p.name}</h3>
-                <p className="text-[#888] text-xs leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
+        <div className="bg-[#C8A96A] rounded-3xl p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <h3 className="text-white text-2xl font-black mb-2">Não sabe qual escolher?</h3>
+            <p className="text-white/80 text-base">Nossa equipe te orienta gratuitamente — sem compromisso.</p>
           </div>
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0 bg-white text-[#C8A96A] font-black py-4 px-8 rounded-full hover:bg-[#1a1a1a] hover:text-white transition-all whitespace-nowrap"
+          >
+            FALAR COM ESPECIALISTA
+          </a>
         </div>
       </div>
     </section>
