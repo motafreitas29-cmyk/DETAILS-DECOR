@@ -26,7 +26,7 @@ export default function Footer() {
               </a>
               <div className="flex items-center gap-2 text-[#999] text-sm">
                 <MapPin className="w-4 h-4 text-[#C8A96A]" />
-                São Paulo — SP
+                Belém — PA
               </div>
             </div>
           </div>
