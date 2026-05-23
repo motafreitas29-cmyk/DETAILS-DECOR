@@ -18,7 +18,7 @@ export default function Hero() {
           VISITAS DISPONÍVEIS ESTA SEMANA — AGENDE AGORA
         </div>
 
-        <p className="text-[#C8A96A] text-sm font-semibold tracking-[0.3em] uppercase mb-4">Especialistas em Decoração · São Paulo</p>
+        <p className="text-[#C8A96A] text-sm font-semibold tracking-[0.3em] uppercase mb-4">Especialistas em Decoração · Belém e Região</p>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
           Transforme seu ambiente com<br />
