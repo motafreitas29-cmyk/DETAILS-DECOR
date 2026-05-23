@@ -26,7 +26,7 @@ export default function Depoimentos() {
               <p className="text-white/80 text-sm leading-relaxed mb-5 italic">"{d.texto}"</p>
               <div>
                 <p className="text-white font-bold text-sm">{d.nome}</p>
-                <p className="text-[#C8A96A] text-xs">{d.bairro} · São Paulo</p>
+                <p className="text-[#C8A96A] text-xs">{d.bairro} · Belém — PA</p>
               </div>
             </div>
           ))}
