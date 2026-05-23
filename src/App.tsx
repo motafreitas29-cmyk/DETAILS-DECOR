@@ -3,12 +3,13 @@ import Hero from './components/Hero';
 import Vantagens from './components/Vantagens';
 import Produtos from './components/Produtos';
 import Galeria from './components/Galeria';
+import Depoimentos from './components/Depoimentos';
 import FAQ from './components/FAQ';
+import CTAFinal from './components/CTAFinal';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 
-const WA_LINK = "https://api.whatsapp.com/send/?phone=559185889882&text=Ol%C3%A1%2C+quero+um+or%C3%A7amento+de+cortinas+e+persianas%21";
-
-export { WA_LINK };
+export const WA_LINK = "https://api.whatsapp.com/send/?phone=559185889882&text=Ol%C3%A1%2C+quero+agendar+uma+visita+t%C3%A9cnica+gratuita%21";
 
 export default function App() {
   return (
@@ -18,8 +19,11 @@ export default function App() {
       <Vantagens />
       <Produtos />
       <Galeria />
+      <Depoimentos />
       <FAQ />
+      <CTAFinal />
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 }
