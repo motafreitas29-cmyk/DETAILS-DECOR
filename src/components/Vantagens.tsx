@@ -10,7 +10,7 @@ const stats = [
 
 const items = [
   { icon: Award, title: 'Mais de 20 anos de experiência', desc: 'Especialistas em cortinas e persianas com histórico comprovado de qualidade e satisfação.' },
-  { icon: MapPin, title: 'Atendemos toda São Paulo', desc: 'Itaim Bibi, Vila Olímpia, Brooklin, Vila Madalena, Jardins, Pinheiros, Vila Mariana, Faria Lima e mais.' },
+  { icon: MapPin, title: 'Atendemos Belém e Região', desc: 'Atendemos Belém e toda a região metropolitana — vamos até você sem custo de deslocamento.' },
   { icon: Wrench, title: 'Instalação profissional incluída', desc: 'Nossa equipe vai até você, mede, instala e garante o acabamento perfeito no seu ambiente.' },
   { icon: Zap, title: 'Motorização e automação', desc: 'Controle suas cortinas com um toque. Soluções modernas para quem valoriza praticidade.' },
 ];
