@@ -1,3 +1,4 @@
+import { MessageCircle, Star, Shield, Clock } from 'lucide-react';
 import { WA_LINK } from '../App';
 
 export default function Hero() {
@@ -7,39 +8,63 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url('https://rmetppilvfrxosvxzhgj.supabase.co/storage/v1/object/public/message-attachments/9e0c4c31-1c4f-4af1-adc5-a255429af516/1778931454417_bjx5ty_c4f17d53-aba7-4536-9a7d-d1c370bbec37.png')` }}
       />
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
 
-      <div className="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-        <p className="text-[#C8A96A] text-sm font-semibold tracking-[0.3em] uppercase mb-4">Especialistas em Decoração</p>
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+
+        {/* Badge urgência */}
+        <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-400/40 text-green-300 text-xs font-bold px-4 py-2 rounded-full mb-6 animate-pulse">
+          <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+          VISITAS DISPONÍVEIS ESTA SEMANA — AGENDE AGORA
+        </div>
+
+        <p className="text-[#C8A96A] text-sm font-semibold tracking-[0.3em] uppercase mb-4">Especialistas em Decoração · São Paulo</p>
+
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
-          Elegância em cada detalhe
+          Transforme seu ambiente com<br />
+          <span className="text-[#C8A96A]">cortinas sob medida</span>
         </h1>
-        <p className="text-white/80 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl mx-auto">
-          Cortinas e persianas personalizadas que transformam ambientes com sofisticação, privacidade e conforto.
+
+        <p className="text-white/85 text-lg sm:text-xl leading-relaxed mb-4 max-w-2xl mx-auto">
+          Visita técnica <strong className="text-white">gratuita e sem compromisso</strong> — medimos, consultamos e instalamos tudo para você.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <p className="text-white/60 text-sm mb-10">Mais de <strong className="text-[#C8A96A]">20 anos</strong> transformando ambientes em São Paulo</p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#C8A96A] text-white font-bold py-4 px-8 rounded-full text-base hover:bg-[#b8954f] transition-all shadow-lg"
+            className="flex items-center justify-center gap-3 bg-green-500 text-white font-black py-5 px-10 rounded-full text-lg hover:bg-green-600 hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(34,197,94,0.4)]"
           >
-            FALAR COM ESPECIALISTA
+            <MessageCircle className="w-6 h-6" />
+            AGENDAR VISITA GRÁTIS
           </a>
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/10 border border-white/40 text-white font-bold py-4 px-8 rounded-full text-base hover:bg-white/20 transition-all backdrop-blur"
+            className="flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white font-semibold py-5 px-8 rounded-full text-base hover:bg-white/20 transition-all backdrop-blur"
           >
-            VER CATÁLOGO
+            VER CATÁLOGO →
           </a>
         </div>
-      </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center pt-2">
-          <div className="w-1 h-2 bg-white/60 rounded-full" />
+        {/* Social proof bar */}
+        <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <div className="flex items-center gap-2 text-white/70">
+            <Star className="w-4 h-4 text-[#C8A96A] fill-[#C8A96A]" />
+            <span><strong className="text-white">+500</strong> clientes satisfeitos</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/70">
+            <Shield className="w-4 h-4 text-[#C8A96A]" />
+            <span><strong className="text-white">Garantia</strong> no serviço</span>
+          </div>
+          <div className="flex items-center gap-2 text-white/70">
+            <Clock className="w-4 h-4 text-[#C8A96A]" />
+            <span>Atendimento <strong className="text-white">rápido</strong></span>
+          </div>
         </div>
       </div>
     </section>
