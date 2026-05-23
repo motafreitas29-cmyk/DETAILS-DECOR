@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { WA_LINK } from '../App';
 
 const links = [
@@ -13,9 +13,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-b border-[#C8A96A]/20 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur shadow-sm border-b border-[#C8A96A]/15">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
-        <a href="#inicio" className="flex items-center gap-2">
+        <a href="#inicio">
           <img
             src="https://detailsdecor.com.br/wp-content/uploads/2020/09/details-decor-logo-cortinas-persianas.png"
             alt="Details Decor"
@@ -23,7 +23,7 @@ export default function Navbar() {
           />
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-7">
           {links.map(l => (
             <a key={l.label} href={l.href} className="text-sm font-medium text-[#555] hover:text-[#C8A96A] transition-colors">{l.label}</a>
           ))}
@@ -31,9 +31,10 @@ export default function Navbar() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#C8A96A] text-white text-sm font-bold px-5 py-2 rounded-full hover:bg-[#b8954f] transition-all"
+            className="flex items-center gap-2 bg-green-500 text-white text-sm font-bold px-5 py-2.5 rounded-full hover:bg-green-600 transition-all shadow-md"
           >
-            ORÇAMENTO
+            <MessageCircle className="w-4 h-4" />
+            AGENDAR VISITA
           </a>
         </div>
 
@@ -51,9 +52,10 @@ export default function Navbar() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-center bg-[#C8A96A] text-white text-sm font-bold px-5 py-3 rounded-full"
+            className="flex items-center justify-center gap-2 bg-green-500 text-white text-sm font-bold px-5 py-3 rounded-full"
           >
-            ORÇAMENTO GRÁTIS
+            <MessageCircle className="w-4 h-4" />
+            AGENDAR VISITA GRÁTIS
           </a>
         </div>
       )}
